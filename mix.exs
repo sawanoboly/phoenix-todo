@@ -19,7 +19,7 @@ defmodule Todo.Mixfile do
   def application do
     [mod: {Todo, []},
      applications: [:phoenix, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :sqlite_ecto]]
+                    :phoenix_ecto, :sqlite_ecto, :sqlitex, :pipe]]
   end
 
   # Specifies which paths to compile per environment.
@@ -32,12 +32,14 @@ defmodule Todo.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.1.4"},
      {:sqlite_ecto, ">= 0.0.0"},
+     {:esqlite, ">= 0.2.0"},
+     {:sqlitex, ">= 0.8.0"},
      {:phoenix_ecto, "~> 2.0"},
      {:phoenix_html, "~> 2.4"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
      {:cowboy, "~> 1.0"},
-     {:exrm, "~> 0.19"}]
+     {:exrm, "~> 1.0"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.
