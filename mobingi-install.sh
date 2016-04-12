@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 set -x
-apt-get install -ybsqlite3-dev
+apt-get install -y libsqlite3-dev
